@@ -1,0 +1,41 @@
+/********** Fixes **********/
+
+
+  /* Posititoning Classes */
+  
+ 
+    .row {
+      clear: both;
+      margin-bottom: 2%;
+      display: flex;
+      align: center;
+    }
+  
+    .row:after {
+      content: ".";
+      display: inline-block;
+      clear: both;
+      visibility: hidden;
+      width: flex;
+      line-height: 0;
+    }
+  
+    [class*="col-"] {
+      float: left;
+      margin-left: 2%;
+      display: inline-block;
+    }
+  
+    [class*="col-"]:first-child {
+      margin-left: 0;
+      display: flex;
+    }
+  
+    .col-4 { width: 23%; }
+    .col-8 { width: 66%; }
+
+
+
+  
+
+
