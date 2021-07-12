@@ -45,44 +45,33 @@ li {
   background-image: url(./images/Background.jpeg);
   background-size: cover;
   padding: 30px 0;
-  width: 100%;
+  width: 100%; /*Setting dimensions of the content area so that everything is in proportion*/
   height: 200%;
 }
 
-/********** Sections **********/
+/********** Sectiion within 2 Different Rows in maincontent div**********/
 
 section {
   padding: 20px;
   background-color: whitesmoke;
   margin-left:20px;
-  box-shadow: 0px -2px 2px whitesmoke;
+  box-shadow: 0px -2px 2px whitesmoke; //blurs the
 }
 
-.column {
-  width: 15%;
-  display: inline-block;
-}
+/* Image tile within section*/
 
-.sidebar {
-  width:110%;
-  padding-right:70px;
-  margin:0px;
-}
-
-.leftbar {
-  width:102%;
-  padding:0px;
-  margin: 0px;
-} 
-
-/* Image tile */
 .container, h1 {
   align-content: center;
   width: 100%;
   max-width: 600px;
   min-width: 400px;
   padding: 2px;
-  margin: 2px auto;
+  margin: 2px auto; 
+}
+
+.column { /*This is the column for the images, not the overall layout, which will be discussed later*/
+  width: 15%;
+  display: inline-block;
 }
 
 /********** External Links **********/
@@ -96,14 +85,6 @@ section {
   text-decoration: underline;
 }
 
-div.rex{
-  height:200px;
-  border:0px;
-  margin:60px auto;
-  padding: 0;
-  vertical-align:top;
-  }
-  
   div.ex{
   background-color:#7e8547;
   display:inline-block;
@@ -149,51 +130,23 @@ div.rex{
     box-shadow: 0px -2px 2px whitesmoke;
     }
 
-section.images{
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
-.row{
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
+
 /* LAYOUT */
-
-
-  /* Posititoning Classes */
   
  @media screen and (min-width: 650px) {
 
-   
-    .row {
+    .row { /*These settings put everything on the same row on the same line and justifies the content*/
       clear: both;
       margin-bottom: 2%;
       display: flex;
       justify-content: center;
     }
   
-    .row:after {
-      content: ".";
-      display: inline-block;
-      clear: both;
-      visibility: hidden;
-      width: flex;
-      line-height: 0;
-    }
-  
-    [class*="col-"] {
+    [class*="col-"] {/*These settings adjust the settings for col-4 and col-8, and sets the widths of these*/
       float: left;
       margin-left: 2%;
       display: inline-block;
     }
-  
-    [class*="col-"]:first-child {
-      margin-left: 0;
-      display: flex;
-    }
-  
     .col-4 { width: 23%; }
     .col-8 { width: 66%; }
 
